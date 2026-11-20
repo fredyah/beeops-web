@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>宇田椿科技 BeeOps — 開放即力量</title>
+  <meta name="description" content="宇田椿科技 BeeOps 以開源軟體協助企業導入 Linux、高可用、Proxmox、Kubernetes 與私有生成式 AI。開放即力量。">
+  <meta name="theme-color" content="#07080c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 40'%3E%3Cpolygon points='18,1 34,10 34,30 18,39 2,30 2,10' fill='none' stroke='%23f5b942' stroke-width='2'/%3E%3Cpolygon points='18,11 26,16 26,25 18,30 10,25 10,16' fill='%23f5b942'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "宇田椿科技有限公司",
+    "alternateName": "BeeOps, LLC.",
+    "url": "https://beeops.com.tw/",
+    "email": "julia@beeops.com.tw",
+    "telephone": "+886-906-808-279",
+    "slogan": "開放即力量 The Power of Open",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "新台五路一段77號",
+      "addressLocality": "汐止區",
+      "addressRegion": "新北市",
+      "addressCountry": "TW"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00"
+  }
+  </script>
+</head>
+<body class="is-booting">
+  <a class="skip" href="#content">跳到主要內容</a>
+  <div class="boot" aria-hidden="true">
+    <div class="boot-center">
+      <svg class="boot-hex" viewBox="0 0 100 112" aria-hidden="true">
+        <polygon points="50,4 96,30 96,82 50,108 4,82 4,30"></polygon>
+      </svg>
+      <p class="boot-kicker">BEEOPS</p>
+      <p class="boot-word">蜂巢啟動中</p>
+      <p class="boot-count">00</p>
+    </div>
+  </div>
+
+  <canvas id="hive" aria-hidden="true"></canvas>
+  <svg class="grain" aria-hidden="true">
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noise)"></rect>
+  </svg>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top">
+      <svg width="28" height="32" viewBox="0 0 36 40" aria-hidden="true">
+        <polygon points="18,1 34,10 34,30 18,39 2,30 2,10" fill="none" stroke="#f5b942" stroke-width="1.6"></polygon>
+        <polygon points="18,11 26,16 26,25 18,30 10,25 10,16" fill="#f5b942"></polygon>
+      </svg>
+      <span>
+        <strong>BEEOPS</strong>
+        <small>宇田椿科技</small>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="主要">
+      <a href="#origin">源起</a>
+      <a href="#services">服務</a>
+      <a href="#solutions">解法</a>
+      <a href="#contact">聯絡</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="sound" type="button" aria-pressed="false" aria-label="開啟環境音">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M2 6.5h2.2L8 3.2v9.6L4.2 9.5H2v-3zM10 6.2a2.8 2.8 0 0 1 0 3.6M11.6 4.4a5 5 0 0 1 0 7.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <a class="btn btn-small magnetic" href="#contact">洽詢</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="開啟選單">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page" id="content">
+    <section class="hero" id="top">
+      <p class="spine">THE POWER OF OPEN</p>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">宇田椿科技有限公司 · A NEXT-GEN SOFTWARE GURU</p>
+          <h1 class="hero-title">
+            <span class="en">BEEOPS</span>
+            <span class="power">THE POWER OF OPEN</span>
+            <span class="zh">開放即力量</span>
+          </h1>
+          <p class="deck">蜜蜂把花園變成果實。我們把開源軟體收成企業跑得動的雲、容器、虛擬化與私有 AI。從評估、建置到技術移轉，顧問級地陪你做完。</p>
+          <div class="hero-cta">
+            <a class="btn magnetic" href="#services">進入蜂巢</a>
+            <a class="btn btn-ghost magnetic" href="#contact">與我們談專案</a>
+          </div>
+        </div>
+        <aside class="hud" aria-label="導入堆疊">
+          <span class="corners" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <div class="hud-top">
+            <span>HIVE / STACK</span>
+            <span class="live"><i></i>可導入</span>
+          </div>
+          <ol>
+            <li>開源 Linux 平台 <span>01</span></li>
+            <li>高可用 HA <span>02</span></li>
+            <li>Proxmox 虛擬化 <span>03</span></li>
+            <li>Kubernetes <span>04</span></li>
+            <li>私有 GenAI <span>05</span></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>LINUX</span><span>KUBERNETES</span><span>PROXMOX VE</span><span>GENAI</span><span>PACEMAKER</span><span>COROSYNC</span><span>KVM</span><span>CLOUD NATIVE</span><span>PRIVATE LLM</span><span>OPEN SOURCE</span>
+        <span>LINUX</span><span>KUBERNETES</span><span>PROXMOX VE</span><span>GENAI</span><span>PACEMAKER</span><span>COROSYNC</span><span>KVM</span><span>CLOUD NATIVE</span><span>PRIVATE LLM</span><span>OPEN SOURCE</span>
+      </div>
+    </div>
+
+    <section class="section" id="origin">
+      <div class="wrap origin-grid">
+        <div class="origin-sticky" data-reveal>
+          <p class="kicker">01 — 源起</p>
+          <h2>效法蜜蜂，<br>把花園收成系統。</h2>
+          <p class="pull">如果開源是一座大花園，BeeOps 就是那群把果實送達的蜜蜂。<em>開放即力量。</em></p>
+        </div>
+        <div data-reveal>
+          <div class="prose">
+            <p>地球上有一種昆蟲，日出而作、日落而息。牠替植物授粉，讓季節得以循環——蜜蜂。</p>
+            <p>人類用蒸汽把機器轉起來，用電力把城市點亮，用網路改寫人與人共事的方式。現在，AI 正在發動第四次工業革命。疫情把生意推上網，ChatGPT 則讓生成式 AI 在幾個月內成為企業不能不面對的能力。</p>
+            <p>資訊系統已是各行各業的基礎建設。宇田椿科技效法蜜蜂的勤奮、團結與學習力，用開源軟體為企業與機關搭起敏捷的 ICT 環境：評估怎麼選、怎麼建、怎麼管，再把技術交回你的團隊。</p>
+            <p>共享的生態系像蜂群朝同一個目標工作。問題不是「要不要開源」，而是怎麼把開源的加值，轉成企業自己的價值。</p>
+          </div>
+          <pre class="term" id="term">hive.status .......... ONLINE
+principle ............ THE POWER OF OPEN
+stack.linux .......... READY
+stack.ha ............. PACEMAKER + COROSYNC
+stack.virtual ........ PROXMOX VE / PBS
+stack.container ...... KUBERNETES
+stack.private-ai ..... OPEN LLM
+mission .............. 開放即創造、數位科技即助力</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="revolutions" style="padding-top:0">
+      <div class="wrap">
+        <div data-reveal>
+          <p class="kicker">02 — 四次革命</p>
+          <h2>我們站在第四次這一側。</h2>
+        </div>
+        <div class="rev-grid" data-reveal>
+          <article class="rev-card">
+            <span class="rev-index">I</span>
+            <h3>蒸汽</h3>
+            <p>機器開始分擔人力。動力第一次離開肌肉。</p>
+            <span class="when">18TH CENTURY</span>
+          </article>
+          <article class="rev-card">
+            <span class="rev-index">II</span>
+            <h3>電氣</h3>
+            <p>電流與磁，把光、聲音和產線送進城市。</p>
+            <span class="when">19TH CENTURY</span>
+          </article>
+          <article class="rev-card">
+            <span class="rev-index">III</span>
+            <h3>資訊</h3>
+            <p>網路與瀏覽器改寫溝通，也改寫商業怎麼發生。</p>
+            <span class="when">20TH CENTURY</span>
+          </article>
+          <article class="rev-card is-now">
+            <span class="rev-index">IV</span>
+            <h3>智能</h3>
+            <p>AI 讓數位能力變成核心競爭力。開源，是企業把它留在自己手上的方法。</p>
+            <span class="when">NOW · BEEOPS</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <div data-reveal>
+          <p class="kicker">03 — 蜂巢在忙什麼</p>
+          <h2>四種平台，一種交付方式。</h2>
+          <p class="lead">協助企業與機關導入、使用、管理開源軟體。規劃、建置、維運、升級，加上顧問級技術移轉與教育訓練。</p>
+        </div>
+        <div class="bento">
+          <article class="card" data-reveal>
+            <span class="card-index">01 / OS</span>
+            <h3>開源作業系統</h3>
+            <p>社群版或商用版 Linux。實體機、虛擬機或容器化，從系統規劃、建置、管理、監控到健檢。</p>
+            <ul class="chips"><li>Linux</li><li>實體機</li><li>虛擬機</li><li>監控</li><li>健檢</li></ul>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card-index">02 / CLOUD</span>
+            <h3>雲地混合容器</h3>
+            <p>以 Kubernetes 為核心的容器運算與管理。你的團隊先熟悉日常維運，專家帶你進入容器平台。</p>
+            <ul class="chips"><li>Kubernetes</li><li>雲地混合</li><li>維運</li><li>升級</li></ul>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card-index">03 / KVM</span>
+            <h3>虛擬主機平台</h3>
+            <p>以 Proxmox VE 管理 KVM，以 Proxmox Backup Server 做備份與還原。包含 VMware 之外的開源選擇。</p>
+            <ul class="chips"><li>Proxmox VE</li><li>Backup Server</li><li>KVM</li><li>還原</li></ul>
+          </article>
+          <article class="card" data-reveal>
+            <span class="card-index">04 / GENAI</span>
+            <h3>私有生成式 AI</h3>
+            <p>文案、語音、影像、翻譯、自動化。開源 LLM 與 AI 套件評估、規劃、建置，資料留在自己的環境。</p>
+            <ul class="chips"><li>Private AI</li><li>Open LLM</li><li>RAG</li><li>內網</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solutions">
+      <div class="wrap">
+        <div data-reveal>
+          <p class="kicker">04 — 解法</p>
+          <h2>混合雲，拆開來看。</h2>
+        </div>
+        <div class="sol" style="margin-top:2rem" data-reveal>
+          <div class="tablist" role="tablist" aria-label="服務解法">
+            <button class="tab" type="button" role="tab" data-tab="linux" aria-selected="true">
+              <small>01</small><strong>Linux 與管理</strong>
+            </button>
+            <button class="tab" type="button" role="tab" data-tab="ha" aria-selected="false">
+              <small>02</small><strong>高可用 HA</strong>
+            </button>
+            <button class="tab" type="button" role="tab" data-tab="proxmox" aria-selected="false">
+              <small>03</small><strong>Proxmox</strong>
+            </button>
+            <button class="tab" type="button" role="tab" data-tab="native" aria-selected="false">
+              <small>04</small><strong>雲原生應用</strong>
+            </button>
+            <button class="tab" type="button" role="tab" data-tab="k8s" aria-selected="false">
+              <small>05</small><strong>Kubernetes</strong>
+            </button>
+            <button class="tab" type="button" role="tab" data-tab="ai" aria-selected="false">
+              <small>06</small><strong>私有 GenAI</strong>
+            </button>
+          </div>
+          <div class="panels">
+            <article class="panel" data-panel="linux" role="tabpanel">
+              <p class="kicker">LINUX</p>
+              <h3>作業系統與管理平台</h3>
+              <p>協助導入開源 Linux，不管跑在實體機、虛擬機或容器。範圍含系統規劃、建置、管理、監控、健檢，以及顧問級的技術移轉與教育訓練。</p>
+              <ul class="chips"><li>規劃</li><li>建置</li><li>管理</li><li>監控</li><li>健檢</li><li>教育訓練</li></ul>
+            </article>
+            <article class="panel" data-panel="ha" role="tabpanel">
+              <p class="kicker">HIGH AVAILABILITY</p>
+              <h3>讓該在線上的服務留在線上</h3>
+              <p>以 Linux 為核心，結合 Pacemaker 與 Corosync，為企業高可用需求做整體規劃、建置、維護與教育訓練。適合不能停機的服務。</p>
+              <ul class="chips"><li>Pacemaker</li><li>Corosync</li><li>叢集</li><li>教育訓練</li></ul>
+            </article>
+            <article class="panel" data-panel="proxmox" role="tabpanel">
+              <p class="kicker">VIRTUALIZATION</p>
+              <h3>Proxmox VE 與 Backup Server</h3>
+              <p>企業級虛擬機管理平台的規劃、建置、維護與升級。Proxmox Backup Server 負責 KVM 的備份與回復，並提供顧問級技術移轉與教育訓練。當虛擬機要換一種管法，這是一條開源的路。</p>
+              <ul class="chips"><li>Proxmox VE</li><li>PBS</li><li>KVM</li><li>VMware 替代</li></ul>
+            </article>
+            <article class="panel" data-panel="native" role="tabpanel">
+              <p class="kicker">CLOUD NATIVE</p>
+              <h3>雲地開發與雲原生應用</h3>
+              <p>為雲端原生應用準備開發平台：Java 或 Python，搭配 WildFly、Tomcat 等中介軟體，接上 MongoDB、MariaDB、Redis，組成可以交付的雲原生服務。也做客製化的雲地整合導入。</p>
+              <ul class="chips"><li>Java</li><li>Python</li><li>WildFly</li><li>Tomcat</li><li>MongoDB</li><li>MariaDB</li><li>Redis</li></ul>
+            </article>
+            <article class="panel" data-panel="k8s" role="tabpanel">
+              <p class="kicker">CONTAINERS</p>
+              <h3>安全的 Kubernetes 平台</h3>
+              <p>以 Kubernetes 為核心，從規劃、建置、維護到升級。企業先掌握基本容器維運，由專家等級的技術支援帶進容器平台，把注意力放回要給客戶的服務。AI、ESG、Big Data、數據中台與 API，都可以是這座平台上的工作負載。</p>
+              <ul class="chips"><li>Kubernetes</li><li>安全</li><li>維運移轉</li><li>應用上平台</li></ul>
+            </article>
+            <article class="panel" data-panel="ai" role="tabpanel">
+              <p class="kicker">PRIVATE AI</p>
+              <h3>安全、私有的 GenAI 平台</h3>
+              <p>生成式 AI 用來抬高流程與產能：文案、語音、影片、翻譯、自動機器人。我們協助導入私有 AI 平台，把開源 LLM 與 AI 套件從評估、規劃一路做到建置，不把第一步就交到別人的雲上。</p>
+              <ul class="chips"><li>Open Source LLM</li><li>評估</li><li>規劃</li><li>建置</li><li>教育訓練</li></ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="questions">
+      <div class="wrap">
+        <div data-reveal>
+          <p class="kicker">05 — 現在最常被問的三件事</p>
+          <h2>數位轉型，先把問題問清楚。</h2>
+        </div>
+        <div class="questions" data-reveal>
+          <article class="q">
+            <b>01</b>
+            <div>
+              <h3>安全的容器環境，如何規劃與管理？</h3>
+              <p>安全的 K8s 容器管理平台。</p>
+            </div>
+          </article>
+          <article class="q">
+            <b>02</b>
+            <div>
+              <h3>GenAI、RAG、ESG、Big Data、API，如何跑在容器上？</h3>
+              <p>應用系統的容器平台，含數據中台。</p>
+            </div>
+          </article>
+          <article class="q">
+            <b>03</b>
+            <div>
+              <h3>虛擬機接下來怎麼管？</h3>
+              <p>Proxmox VE 與 Backup Server，作為 VMware 的開源替代方案。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div data-reveal>
+          <p class="kicker">06 — 聯絡 / 加入</p>
+          <h2>把需求交給蜂巢。</h2>
+          <p class="lead">我們以客戶為尊。業務洽詢、導入評估，歡迎在營業時間寫信、來電，或親自來。</p>
+          <div class="career">
+            <strong>人才加入團隊</strong>
+            <p>我們人才為本。職缺與公司介紹在 104。</p>
+            <a class="btn btn-ghost" href="https://www.104.com.tw/company/1a2x6blvr2?jobsource=index_cs" target="_blank" rel="noopener noreferrer">查看 104 職缺</a>
+          </div>
+          <ul class="facts">
+            <li>
+              <strong>EMAIL</strong>
+              <a href="mailto:julia@BeeOps.com.tw">julia@BeeOps.com.tw</a>
+            </li>
+            <li>
+              <strong>PHONE</strong>
+              <a href="tel:+886906808279">0906-808-279</a>
+            </li>
+            <li>
+              <strong>HOURS</strong>
+              週一至週五　09:00 – 18:00
+            </li>
+            <li>
+              <strong>汐止</strong>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=新北市汐止區新台五路一段77號" target="_blank" rel="noopener noreferrer">新北市汐止區新台五路一段 77 號</a>
+            </li>
+            <li>
+              <strong>信義</strong>
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=台北市信義區忠孝東路四段563號" target="_blank" rel="noopener noreferrer">台北市信義區忠孝東路四段 563 號</a>
+            </li>
+          </ul>
+        </div>
+        <form class="inquiry" id="inquiry" data-reveal>
+          <div class="form-row">
+            <label class="field">
+              <span>姓名</span>
+              <input name="name" autocomplete="name" required maxlength="80" placeholder="怎麼稱呼你">
+            </label>
+            <label class="field">
+              <span>電子郵件</span>
+              <input name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@company.com">
+            </label>
+          </div>
+          <label class="field">
+            <span>想談的題目</span>
+            <select name="topic" required>
+              <option value="Linux 平台">Linux 平台</option>
+              <option value="高可用 HA">高可用 HA</option>
+              <option value="Proxmox 虛擬化">Proxmox 虛擬化</option>
+              <option value="雲原生應用">雲原生應用</option>
+              <option value="Kubernetes">Kubernetes</option>
+              <option value="私有 GenAI">私有 GenAI</option>
+              <option value="其他">其他</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>訊息</span>
+            <textarea name="message" required maxlength="2000" placeholder="環境現況、時程，或你想先問的一件事"></textarea>
+          </label>
+          <button class="btn magnetic" type="submit">送出洽詢</button>
+          <p class="form-note">送出後會開啟你的郵件程式，寄到 julia@BeeOps.com.tw。這份網頁不會保存表單內容。</p>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer-row">
+        <div>
+          <strong>BEEOPS</strong>
+          <p>開放即創造、數位科技即助力</p>
+          <p>© 2026 宇田椿科技有限公司 BeeOps, LLC.</p>
+        </div>
+        <p><a href="#top">回到蜂巢頂端</a></p>
+      </div>
+    </footer>
+  </div>
+
+  <noscript>
+    <style>
+      .boot { display: none !important; }
+      body { overflow: auto !important; }
+    </style>
+  </noscript>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
