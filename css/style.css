@@ -218,7 +218,15 @@ body.cursor-text .cursor-ring { display: none; }
   position: relative;
   z-index: 46;
 }
-.brand svg { display: block; filter: drop-shadow(0 0 10px rgba(245, 185, 66, 0.45)); }
+.brand-mark {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 10px rgba(245, 185, 66, 0.45));
+}
 .brand strong {
   display: block;
   font-family: var(--display);
@@ -315,7 +323,22 @@ body.cursor-text .cursor-ring { display: none; }
 .hero {
   position: relative;
   min-height: 100svh;
-  background: transparent;
+  background: #07080c url("../media/hive.webp") 18% center / cover no-repeat;
+}
+.hero-side {
+  display: grid;
+  gap: 0.85rem;
+  align-content: end;
+  min-width: 0;
+}
+.hero-film {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: #07080c url("../media/mark.webp") center / cover no-repeat;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
 }
 .hero::after {
   content: "";
@@ -626,6 +649,13 @@ h2 {
 }
 .card:hover::before { opacity: 1; }
 .card:hover { border-color: var(--line); }
+.card-visual {
+  display: block;
+  width: calc(100% + 2.75rem);
+  height: 190px;
+  margin: -1.4rem -1.35rem 1.15rem;
+  object-fit: cover;
+}
 .card-index {
   font-family: var(--display);
   font-size: 0.95rem;

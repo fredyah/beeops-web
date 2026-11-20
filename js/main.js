@@ -327,6 +327,12 @@ function bindHive(hive) {
   onScroll();
 }
 
+function initFilm() {
+  const film = document.querySelector(".hero-film");
+  if (!film || reduced) return;
+  film.play().catch(() => {});
+}
+
 function bindProgressWithoutHive() {
   const bar = document.querySelector(".progress > span");
   if (!bar) return;
@@ -358,6 +364,7 @@ async function main() {
   counter.finish();
   await delay(160);
 
+  initFilm();
   document.body.classList.remove("is-booting");
   document.querySelector(".boot")?.classList.add("is-done");
   if (hive) bindHive(hive);
