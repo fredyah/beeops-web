@@ -329,8 +329,37 @@ function bindHive(hive) {
 
 function initFilm() {
   const film = document.querySelector(".hero-film");
-  if (!film || reduced) return;
-  film.play().catch(() => {});
+  if (!film) return;
+
+  film.muted = true;
+  film.playsInline = true;
+
+  if (reduced) {
+    film.removeAttribute("autoplay");
+    film.pause();
+    film.controls = true;
+    return;
+  }
+
+  const play = () => {
+    if (!film.paused) return;
+    film.play().then(() => {
+      film.controls = false;
+    }).catch(() => {
+      film.controls = true;
+    });
+  };
+
+  play();
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) play();
+    }, { threshold: 0.2 });
+    observer.observe(film);
+  }
+
+  window.addEventListener("pointerdown", play, { once: true });
 }
 
 function bindProgressWithoutHive() {
@@ -344,6 +373,7 @@ function bindProgressWithoutHive() {
 }
 
 async function main() {
+  initFilm();
   initTabs();
   initMenu();
   initForm();
@@ -364,7 +394,6 @@ async function main() {
   counter.finish();
   await delay(160);
 
-  initFilm();
   document.body.classList.remove("is-booting");
   document.querySelector(".boot")?.classList.add("is-done");
   if (hive) bindHive(hive);
